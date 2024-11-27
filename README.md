@@ -15,6 +15,7 @@ Theia is a navigation app intended to aid visually impaired individuals in their
   ## Install React Native CLI
     npm install -g react-native-cli
   ## Install Navigation Libraries:
+    npm install @react-native/metro-config
     npm install @react-navigation/native
     npm install react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-vector-icons
   ## Install React Native CLI for Linking Native Modules:
