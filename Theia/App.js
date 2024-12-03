@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen'; // Home Screen
 import ApplicationSettings from './src/screens/ApplicationSettings'; // Settings Screen
 import EmergencyAlert from './src/screens/EmergencyAlert'; // Emergency Alert Screen
+import NavigationAssistance from './src/screens/NavigationAssistance';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +19,13 @@ const App = () => {
           options={{
             title: 'Theia', // Header title
           }}
+        />
+
+        {/* Navigation Assistance Screen */}
+        <Stack.Screen
+          name="NavigationAssistance"
+          component={NavigationAssistance}
+          options={{ title: 'Navigation Assistance' }}
         />
 
         {/* Application Settings Screen */}
