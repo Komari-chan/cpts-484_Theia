@@ -1,25 +1,46 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/screens/HomeScreen'; // Home Screen
+import ApplicationSettings from './src/screens/ApplicationSettings'; // Settings Screen
+import EmergencyAlert from './src/screens/EmergencyAlert'; // Emergency Alert Screen
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, Theia App!</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        {/* Home Screen */}
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: 'Theia', // Header title
+          }}
+        />
+
+        {/* Application Settings Screen */}
+        <Stack.Screen
+          name="Settings"
+          component={ApplicationSettings}
+          options={{
+            title: 'Settings',
+          }}
+        />
+
+        {/* Emergency Alert Screen */}
+        <Stack.Screen
+          name="EmergencyAlert"
+          component={EmergencyAlert}
+          options={{
+            title: 'Emergency Alert',
+          }}
+        />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f8f9fa',
-  },
-  text: {
-    fontSize: 20,
-    color: '#212529',
-  },
-});
 
 export default App;

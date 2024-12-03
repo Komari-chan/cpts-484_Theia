@@ -7,6 +7,8 @@ const HomeScreen = ({ navigation }) => {
       <Text>Welcome to Theia</Text>
       <Button title="Start Navigation" onPress={() => navigation.navigate('Navigation')} />
       <Button title="Settings" onPress={() => navigation.navigate('Settings')} />
+      <Button title="Go to Emergency Alert" onPress={() => navigation.navigate('EmergencyAlert')} />
+
     </View>
   );
 };
